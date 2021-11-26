@@ -1,13 +1,13 @@
-const searchBox = document.getElementById("input-search");      //get search box
-const getTodo = document.getElementById("todo-input");          //get todo input from user
-const submitTodo = document.getElementById("submit-button");    // get submit button
-const todoList = document.getElementById('list-of-todos');      // get the list of todos
-const deleteAll = document.getElementById("delete-all");        // get delete button
-const filterOption = document.getElementById("todo-filter");    // get todo filter
+const searchBox = document.getElementById("input-search");
+const getTodo = document.getElementById("todo-input");
+const submitTodo = document.getElementById("submit-button");
+const todoList = document.getElementById('list-of-todos');
+const deleteAll = document.getElementById("delete-all");
+const filterOption = document.getElementById("todo-filter");
 
 
-
-submitTodo.addEventListener('click', addTodo)                   //adds event listeners to the appropriate field and buttons
+//Adds event listeners to the appropriate field and buttons
+submitTodo.addEventListener('click', addTodo)
 todoList.addEventListener('click', favDoneDel)
 searchBox.addEventListener('keyup', searchTodo)
 deleteAll.addEventListener('click', deleteTodo)
@@ -46,22 +46,22 @@ function addTodo(e) {
     li.appendChild(div)
     //adds class to the li. the class is same with the html li
     li.className = 'todo-item'
-    // this is to avoid submitting empty list with just buttons
+
     if (getTodo.value != "") {
         todoList.appendChild(li) // appends the li to the todoList from html
     }
-    getTodo.value = ""           // sets inputfield to clear after submitting
+    getTodo.value = ""
 }
 
 //Adds to Favorite, Deletes or mark has Done
 function favDoneDel(e) {
-    if (e.target.classList.contains('delete')) {    //checks to see it the button clicked has class delete
-        if (confirm('Kindly Confirm Delete')) {     // This is just to confirm if you truly want to delete
+    if (e.target.classList.contains('delete')) {
+        if (confirm('Kindly Confirm Delete')) {
             const div = e.target.parentElement;     // Due to the way the li is set up, it needs to get out of the div the li
             const li = div.parentElement;
 
-            todoList.removeChild(li);               // This removes the li
-        }                                           // THE REMAING CONDITIONS FOLLOW THIS RULE
+            todoList.removeChild(li);
+        }
     }
 
     else if (e.target.classList.contains('done')) {
@@ -79,11 +79,11 @@ function favDoneDel(e) {
 
 // Adds functonality to the search box
 function searchTodo(e) {
-    const text = e.target.value.toLowerCase();               // sets the input to lowercase
+    const text = e.target.value.toLowerCase();
     const todos = todoList.getElementsByTagName('li');      // gets all the lists
-    Array.from(todos).forEach(function (todo) {             // converts to array so array methods can be used
+    Array.from(todos).forEach(function (todo) {
         const itemName = todo.firstChild.textContent;
-        if (itemName.toLowerCase().indexOf(text) != -1) {   // Sets display to only elements in the search box
+        if (itemName.toLowerCase().indexOf(text) != -1) {
             todo.style.display = "block"
         } else {
             todo.style.display = 'none'
@@ -105,10 +105,10 @@ function deleteTodo(e) {
 
 // Filter
 function filterTodo(event) {
-    let todos = todoList.getElementsByTagName('li');            //Gets all the li
+    let todos = todoList.getElementsByTagName('li');
     todos = Array.from(todos)                                   // Converts to array so forEach can be applied
-    todos.forEach(function (todo) {                             //switch through each elements to check if they contain the appropriate class
-        switch (event.target.value) {                           // and displays accordingly
+    todos.forEach(function (todo) {
+        switch (event.target.value) {
             case "all":
                 todo.style.display = "flex";
                 break;

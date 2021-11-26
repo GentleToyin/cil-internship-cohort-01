@@ -12,7 +12,7 @@ putBtn.addEventListener('click', putTodo)
 
 
 function getTodo() {
-    fetch('https://jsonplaceholder.typicode.com/todos')   //Gets data from API, lets todo to 10
+    fetch('https://jsonplaceholder.typicode.com/todos')   //Gets data from API
         .then(res => {
             return res.json();
         })
