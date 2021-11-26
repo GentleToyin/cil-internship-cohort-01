@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+    <title>Todo List</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-text">
+            <h1>Toyin's Todo List</h1>
+            <p>Using <strong style="font-size: 25px;">Typescript</strong></p>
+        </div>
+        <div class="search">
+            <input id="input-search" type="text" placeholder="search todo">
+            <div class="select">
+                <select name="todos" class="filter-todo" id="todo-filter">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="favorite">favorites</option>
+                    <option value="uncompleted">Uncompleted</option>
+                </select>
+            </div>
+        </div>
+    </header>
+    <div class="add-todos">
+        <form>
+            <input id="todo-input" type="input" placeholder="Add todo">
+            <input id="submit-button" type="submit" value="ADD">
+        </form>
+
+
+        <ul class="todo-lists" id="list-of-todos">
+            <li class="todo-item completed">Induction Phase
+                <div>
+                    <button class="favorite">IMPT</button>
+                    <button class="done">Done</button>
+                    <button class="delete">DEL</button>
+                </div>
+            </li>
+
+            <li class="todo-item completed">Module One
+                <div>
+                    <button class="favorite">IMPT</button>
+                    <button class="done">Done</button>
+                    <button class="delete">DEL</button>
+                </div>
+
+            </li>
+            <li class="todo-item">Module Two
+                <div>
+                    <button class="favorite">IMPT</button>
+                    <button class="done">Done</button>
+                    <button class="delete">DEL</button>
+                </div>
+            </li>
+
+            <li class="todo-item">Module Three
+                <div>
+                    <button class="favorite">IMPT</button>
+                    <button class="done">Done</button>
+                    <button class="delete">DEL</button>
+                </div>
+            </li>
+
+            <li class="todo-item">Module Four
+                <div>
+                    <button class="favorite">IMPT</button>
+                    <button class="done">Done</button>
+                    <button class="delete">DEL</button>
+                </div>
+            </li>
+            <li class="todo-item">Debrief and Feedback
+                <div>
+                    <button class="favorite">IMPT</button>
+                    <button class="done">Done</button>
+                    <button class="delete">DEL</button>
+                </div>
+            </li>
+        </ul>
+
+
+    </div>
+    <div class="todo-lists">
+        <button id="delete-all">Delete All</button>
+    </div>
+</body>
+<script src="./script.js"></script>
+
+</html>

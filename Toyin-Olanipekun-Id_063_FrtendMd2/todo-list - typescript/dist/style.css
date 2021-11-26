@@ -1,0 +1,113 @@
+*{
+    font-family: 'Roboto mono';
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2a78a5;
+    color: white;
+    margin-bottom: 20px;
+}
+body{
+    width: 100vw;
+    
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    cursor: pointer;
+}
+.todo-lists{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.todo-item{
+    width: 40vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: #2a78a5;
+    border: 1px solid white;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+}
+#input-search{
+    width: 20vw;
+    height: 30px;
+}
+#todo-input{
+    width: 20vw;
+    height: 30px;
+}
+#submit-button{
+    height: 36px;
+    cursor: pointer;
+    color: white;
+    background-color: #2a78a5;
+    width: 100px;
+    margin-left: 10px;
+    
+}
+#delete-all{
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-size: larger;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: rgb(245, 41, 5);
+    color: white;
+}
+
+.starred .favorite{
+    background-color: yellow;
+    border: none;
+    height: 25px;
+}
+
+.completed{
+    text-decoration: line-through;
+     opacity: 0.5;
+     background-color: #62e6ae;
+}
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.filter-todo{
+    height: 36px;
+
+}
+
+
+.header-text{
+    text-align: center;
+}
+
+
+
+
+
+.delete:hover{
+    background-color: red;
+    border: none;
+}
+.favorite:hover{
+    background-color: yellow;
+    border: none;
+}
+.done:hover{
+    background-color: green;
+    border: none;
+}
