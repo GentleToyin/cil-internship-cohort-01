@@ -1,0 +1,18 @@
+<div class="contact">
+    <h3>{{contact.name}}
+        <div class="icon-sep">
+            <fa-icon (click)="toggleEdit()" style="color: yellow;" [icon]="faEdit"></fa-icon>
+            <fa-icon (click)="onDelete(contact)" style=" color: red" [icon]="faTimes"></fa-icon>
+        </div>
+    </h3>
+    <p>{{contact.phone}}</p>
+    <form (ngSubmit)="onUpdate()" *ngIf="showEdit">
+        <div>
+            <input type="text" name="name" [(ngModel)]="contact.name" id="name" placeholder="type name..." />
+        </div>
+        <div>
+            <input type="text" name="phone" [(ngModel)]="contact.phone" id="phone" placeholder="type phone number..." />
+        </div>
+        <input style="background-color: green; color: white;" type="submit" value="Update Contact" />
+    </form>
+</div>

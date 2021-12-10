@@ -1,0 +1,12 @@
+<form class="add-form" (ngSubmit)="onSubmit()">
+    <div class="form-control ">
+        <label for="name">Name</label>
+        <input type="text" name="name" [(ngModel)]="name" id="name" placeholder="type name..." required />
+    </div>
+    <div class="form-control">
+        <label for="phone">Phone Number</label>
+        <input type="text" name="phone" [(ngModel)]="phone" id="phone" placeholder="type phone number..." required />
+    </div>
+
+    <input type="submit" value="Save Contact" class="btn btn-block" />
+</form>
